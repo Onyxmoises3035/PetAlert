@@ -35,5 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-#prisma
+#error prisma demo
 /prismas
+/src/app/apis
