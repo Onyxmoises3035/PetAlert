@@ -1,0 +1,110 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// config de prisma se le cambia el 'provider' a 'mysql' para funcionar
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// modelos o tablas de la BD que va a generar prisma
+model usuario {
+  usu_id          Int        @id @default(autoincrement())
+  usu_adm         Int
+  usu_name        String     @unique
+  usu_email       String     @unique
+  usu_password    String
+  usu_telefono    String
+  usu_telrepuesto String?
+  masc            mascotas[]
+}
+
+model edad {
+  edad_id     Int    @id @default(autoincrement())
+  edad_tiempo String
+}
+
+model raza {
+  raza_id     Int    @id @default(autoincrement())
+  raza_tipo   String
+  raza_nombre String
+}
+
+model colorP {
+  colorP_id      Int    @id @default(autoincrement())
+  colorP_colores String
+}
+
+model patron {
+  patron_id          Int    @id @default(autoincrement())
+  patron_combinacion String
+}
+
+model colorOjos {
+  colorOjos_id   Int    @id @default(autoincrement())
+  colorOjos_Ojos String
+}
+
+model pelaje {
+  pelaje_id     Int    @id @default(autoincrement())
+  pelaje_patron String
+}
+
+model mascotas {
+  mac_id         Int      @id @default(autoincrement())
+  mas_nombre     String
+  mas_sexo       String
+  mas_especie    String
+  mas_edad       String
+  mas_raza       String
+  mas_colorP     String
+  mas_patron     String
+  mas_colorOjos  String
+  mas_pelaje     String
+  mas_particular String
+  mas_actitud    String
+  mas_estatus    Boolean
+  mas_imgFron    String
+  usu            usuario  @relation(fields: [usu_id], references: [usu_id])
+  usu_id         Int
+  coment         coment[]
+}
+
+model coment {
+  com_id   Int      @id @default(autoincrement())
+  com_text String
+  com_fec  String
+  com_hor  String
+  com_usu  String
+  mac      mascotas @relation(fields: [mac_id], references: [mac_id])
+  mac_id   Int
+}
+
+model reporte {
+  rep_id  Int      @id @default(autoincrement())
+  rep_fec String
+  rep_hor String
+  rep_usu String
+  rep_pro String
+  rep_sta String
+  rep_nom String?
+  ticket  ticket[]
+}
+
+model ticket {
+  tic_id   Int     @id @default(autoincrement())
+  tic_hor  String
+  tic_fec  String
+  tic_pri  String
+  tic_tipo String
+  tic_nom  String
+  rep      reporte @relation(fields: [rep_id], references: [rep_id])
+  rep_id   Int
+}
