@@ -1,4 +1,4 @@
-import AddPets from "@/components/AddPets";
+// import AddPets from "@/components/AddPets";
 // import axios from 'axios';
 // import { getServerSession } from 'next-auth/next';
 // import { authOptions } from '@/app/api/auth/[...nextauth]/route';
@@ -38,28 +38,28 @@ import AddPets from "@/components/AddPets";
 //     return data;
 // }
 
-const addPet = async () => {
+// const addPet = async () => {
 
-    // const session = await getServerSession(authOptions)
+//     const session = await getServerSession(authOptions)
 
-    // const edad = await catEdad();
-    // const raza = await catRaza();
-    // const colorP = await catColorP();
-    // const patron = await catPatron();
-    // const colorO = await catColorO();
-    // const pelaje = await catPelaje();
-    // const id = await user(session.user.name);
+//     const edad = await catEdad();
+//     const raza = await catRaza();
+//     const colorP = await catColorP();
+//     const patron = await catPatron();
+//     const colorO = await catColorO();
+//     const pelaje = await catPelaje();
+//     const id = await user(session.user.name);
 
-    return (
-        <div>
-            <div className="pt-24 mx-5 flex items-center flex-col text-center">
-                <h1 className="text-2xl m-5 bg-BF rounded-full w-full md:w-1/2 lg:w-5/12 xl:w-5/12">Añadir mascota</h1>
-            </div>
-            <div className='flex justify-center items-center h-full text-left'>
-                <AddPets id={id} edad={edad} raza={raza} colorP={colorP} patron={patron} colorO={colorO} pelaje={pelaje} />
-            </div>
-        </div>
-    );
-};
+//     return (
+//         <div>
+//             <div className="pt-24 mx-5 flex items-center flex-col text-center">
+//                 <h1 className="text-2xl m-5 bg-BF rounded-full w-full md:w-1/2 lg:w-5/12 xl:w-5/12">Añadir mascota</h1>
+//             </div>
+//             <div className='flex justify-center items-center h-full text-left'>
+//                 <AddPets id={id} edad={edad} raza={raza} colorP={colorP} patron={patron} colorO={colorO} pelaje={pelaje} />
+//             </div>
+//         </div>
+//     );
+// };
 
-export default addPet;
+// export default addPet;
