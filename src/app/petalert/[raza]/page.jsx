@@ -1,10 +1,10 @@
 import CardPet from "@/components/CardPet";
-import axios from "axios";
+// import axios from "axios";
 
-async function extraviados(raza) {
-    const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/ia/${raza}`);
-    return data;
-}
+// async function extraviados(raza) {
+//     const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/ia/${raza}`);
+//     return data;
+// }
 
 const petalert = async ({ params }) => {
 

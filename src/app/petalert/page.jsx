@@ -1,16 +1,16 @@
 import CardPet from "@/components/CardPet";
 import IaPet from "@/components/IaPet";
 import { ImageList } from "@mui/material";
-import axios from "axios";
+// import axios from "axios";
 
-async function extraviados() {
-    const { data } = await axios.get(process.env.NEXTAUTH_URL + "/api/pets");
-    return data;
-}
+// async function extraviados() {
+//     const { data } = await axios.get(process.env.NEXTAUTH_URL + "/api/pets");
+//     return data;
+// }
 
 const petalert = async () => {
 
-    const pets = await extraviados();
+    // const pets = await extraviados();
 
     const petsDemo = [
         {mac_id: 1, mas_nombre: 'Pelusa', mas_sexo: 'Hembra', mas_especie: 'Gato', mas_edad: '1 año', mas_raza:'Bombay', mas_colorP: 'Naranja', mas_patron: 'Rojizo', mas_colorOjos: 'Miel', mas_pelaje: 'Lanoso', mas_particular: 'Tiene el labio partido', mas_actitud: 'Si', mas_estatus: true, mas_imgFron: 'https://res.cloudinary.com/dt7jeebnl/image/upload/v1718467926/gmjl05mnj5yv09o6mm3j.jpg', usu_id: 1},

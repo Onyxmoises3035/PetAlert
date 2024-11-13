@@ -1,19 +1,19 @@
 import ContactPet from "@/components/ContactPet";
-import axios from "axios";
+// import axios from "axios";
 
-async function informacion(id) {
-    if (id && Number.isInteger(parseInt(id))) {
-        const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/info/${id}`);
-        return data;
-    } else {
-        return;
-    }
-}
+// async function informacion(id) {
+//     if (id && Number.isInteger(parseInt(id))) {
+//         const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/info/${id}`);
+//         return data;
+//     } else {
+//         return;
+//     }
+// }
 
-async function informacionUser(id) {
-    const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/userInfo/${id}`);
-    return data;
-}
+// async function informacionUser(id) {
+//     const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/userInfo/${id}`);
+//     return data;
+// }
 
 const contact = async ({ params }) => {
 

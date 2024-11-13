@@ -1,33 +1,33 @@
 import InfoPet from "@/components/InfoPet";
-import axios from "axios";
-import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+// import axios from "axios";
+// import { getServerSession } from 'next-auth/next';
+// import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
-async function informacion(id) {
-    if (id && Number.isInteger(parseInt(id))) {
-        const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/info/${id}`);
-        return data;
-    } else {
-        return;
-    }
-}
+// async function informacion(id) {
+//     if (id && Number.isInteger(parseInt(id))) {
+//         const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/info/${id}`);
+//         return data;
+//     } else {
+//         return;
+//     }
+// }
 
-async function comentarios(id) {
-    if (id && Number.isInteger(parseInt(id))) {
-        const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/com/${id}`);
-        return data;
-    } else {
-        return;
-    }
-}
+// async function comentarios(id) {
+//     if (id && Number.isInteger(parseInt(id))) {
+//         const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/com/${id}`);
+//         return data;
+//     } else {
+//         return;
+//     }
+// }
 
 const info = async ({ params }) => {
 
     const { id } = params;
 
-    const session = await getServerSession(authOptions)
-    const infor = await informacion(id);
-    const com = await comentarios(id);
+    // const session = await getServerSession(authOptions)
+    // const infor = await informacion(id);
+    // const com = await comentarios(id);
 
     const petsDemo = [
         { mac_id: 1, mas_nombre: 'Pelusa', mas_sexo: 'Hembra', mas_especie: 'Gato', mas_edad: '1 año', mas_raza: 'Bombay', mas_colorP: 'Naranja', mas_patron: 'Rojizo', mas_colorOjos: 'Miel', mas_pelaje: 'Lanoso', mas_particular: 'Tiene el labio partido', mas_actitud: 'Si', mas_estatus: true, mas_imgFron: 'https://res.cloudinary.com/dt7jeebnl/image/upload/v1718467926/gmjl05mnj5yv09o6mm3j.jpg', usu_id: 1 },
