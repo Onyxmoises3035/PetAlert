@@ -1,18 +1,18 @@
-import { NextResponse } from "next/server";
-import prisma from "@/libs/db";
+// import { NextResponse } from "next/server";
+// import prisma from "@/libs/db";
 
-export async function GET(request, {params} ){
+// export async function GET(request, {params} ){
 
-    const id = parseInt(params.id);
+//     const id = parseInt(params.id);
 
-    const result = await prisma.reporte.findUnique({
-        where:{
-            rep_id: id
-        },
-        include: {
-            ticket: true
-        }
-    });
+//     const result = await prisma.reporte.findUnique({
+//         where:{
+//             rep_id: id
+//         },
+//         include: {
+//             ticket: true
+//         }
+//     });
 
-    return NextResponse.json(result)
-}
+//     return NextResponse.json(result)
+// }

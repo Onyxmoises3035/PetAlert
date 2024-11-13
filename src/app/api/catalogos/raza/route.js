@@ -1,10 +1,10 @@
-import { NextResponse } from "next/server";
-import prisma from "@/libs/db";
+// import { NextResponse } from "next/server";
+// import prisma from "@/libs/db";
 
-// endpoint para la extraccion de una mascota en particulas
-export async function GET() {
+// // endpoint para la extraccion de una mascota en particulas
+// export async function GET() {
 
-    const result = await prisma.raza.findMany()
+//     const result = await prisma.raza.findMany()
 
-    return NextResponse.json(result)
-}
+//     return NextResponse.json(result)
+// }

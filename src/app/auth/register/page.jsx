@@ -1,15 +1,15 @@
 import RegPet from "@/components/RegPet"
-import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
-import { redirect } from 'next/navigation';
+// import { getServerSession } from 'next-auth/next';
+// import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+// import { redirect } from 'next/navigation';
 
 const register = async () => {
 
-    const session = await getServerSession(authOptions)
+    // const session = await getServerSession(authOptions)
 
-    if (session != null) {
-        redirect('/myPets')
-    }
+    // if (session != null) {
+    //     redirect('/myPets')
+    // }
 
     return (
         <>
