@@ -1,6 +1,6 @@
 import CardPet from "@/components/CardPet";
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/app/apis/auth/[...nextauth]/route';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import axios from "axios";
 import { Button, ImageList } from "@mui/material";
 

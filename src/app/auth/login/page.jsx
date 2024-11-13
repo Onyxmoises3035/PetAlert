@@ -1,6 +1,6 @@
 import LogPet from "@/components/LogPet"
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/app/apis/auth/[...nextauth]/route';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 import { redirect } from 'next/navigation';
 
 const login = async () => {

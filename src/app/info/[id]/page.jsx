@@ -1,7 +1,7 @@
 import InfoPet from "@/components/InfoPet";
 import axios from "axios";
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/app/apis/auth/[...nextauth]/route';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
 async function informacion(id) {
     if (id && Number.isInteger(parseInt(id))) {

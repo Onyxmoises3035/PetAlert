@@ -1,7 +1,7 @@
 import AddPets from "@/components/AddPets";
 import axios from 'axios';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '@/app/apis/auth/[...nextauth]/route';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
 
 async function user(name) {
     const { data } = await axios.get(process.env.NEXTAUTH_URL + `/api/user/${name}`);
