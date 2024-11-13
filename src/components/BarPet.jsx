@@ -1,7 +1,7 @@
 import { AppBar, Typography, Toolbar, Button } from '@mui/material';
 // import { getServerSession } from 'next-auth/next';
 // import { authOptions } from '@/app/api/auth/[...nextauth]/route';
-// import MenuPet from './MenuPet';
+import MenuPet from './MenuPet';
 // import axios from 'axios';
 
 // async function user(name) {

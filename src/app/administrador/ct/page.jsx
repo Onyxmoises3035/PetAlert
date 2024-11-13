@@ -14,30 +14,30 @@
 //     return data;
 // }
 
-const controTotal = async () => {
+// const controTotal = async () => {
 
-    // const session = await getServerSession(authOptions);
-    // const userInfo = await user(session.user.name);
-    // const usu = await usuarios();
+//     const session = await getServerSession(authOptions);
+//     const userInfo = await user(session.user.name);
+//     const usu = await usuarios();
 
-    // const rows = usu.map(usu => {
-    //     const temp = usu.usu_id;
-    //     delete usu.rep_id;
-    //     usu.id = temp;
-    //     return usu;
-    // })
+//     const rows = usu.map(usu => {
+//         const temp = usu.usu_id;
+//         delete usu.rep_id;
+//         usu.id = temp;
+//         return usu;
+//     })
 
-    return (
-        <div className='pt-28 flex justify-center'>
-            {(userInfo.usu_adm == 2) ?
-                <div className='bg-BC w-fit'>
-                    <TabCPet rows={rows}/>
-                </div>
-                :
-                <NoPet />
-            }
-        </div>
-    )
-}
+//     return (
+//         <div className='pt-28 flex justify-center'>
+//             {(userInfo.usu_adm == 2) ?
+//                 <div className='bg-BC w-fit'>
+//                     <TabCPet rows={rows}/>
+//                 </div>
+//                 :
+//                 <NoPet />
+//             }
+//         </div>
+//     )
+// }
 
-export default controTotal;
+// export default controTotal;
