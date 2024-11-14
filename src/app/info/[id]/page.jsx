@@ -29,6 +29,8 @@ const info = async ({ params }) => {
     // const infor = await informacion(id);
     // const com = await comentarios(id);
 
+    const session = null
+
     const petsDemo = [
         { mac_id: 1, mas_nombre: 'Pelusa', mas_sexo: 'Hembra', mas_especie: 'Gato', mas_edad: '1 año', mas_raza: 'Bombay', mas_colorP: 'Naranja', mas_patron: 'Rojizo', mas_colorOjos: 'Miel', mas_pelaje: 'Lanoso', mas_particular: 'Tiene el labio partido', mas_actitud: 'Si', mas_estatus: true, mas_imgFron: 'https://res.cloudinary.com/dt7jeebnl/image/upload/v1718467926/gmjl05mnj5yv09o6mm3j.jpg', usu_id: 1 },
         { mac_id: 2, mas_nombre: 'Pedro', mas_sexo: 'Macho', mas_especie: 'Gato', mas_edad: '3 año', mas_raza: 'Anogora', mas_colorP: 'Naranja', mas_patron: 'Rojizo', mas_colorOjos: 'Miel', mas_pelaje: 'Duro', mas_particular: 'Tiene el labio partido', mas_actitud: 'Si', mas_estatus: true, mas_imgFron: 'https://res.cloudinary.com/dt7jeebnl/image/upload/v1717641157/qflaoxkqyy1ayacaaswz.jpg', usu_id: 1 },
