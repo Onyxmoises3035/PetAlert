@@ -15,34 +15,34 @@
 //     return data;
 // }
 
-// const listaRepotes = async () => {
+const listaRepotes = async () => {
 
-//     const session = await getServerSession(authOptions);
-//     const userInfo = await user(session?.user.name);
-//     const tic = await tickets();
+    // const session = await getServerSession(authOptions);
+    // const userInfo = await user(session?.user.name);
+    // const tic = await tickets();
 
-//     const rows = [];
+    // const rows = [];
 
-//     for (let i = 0; i < tic.length; i++) {
-//         tic[i].ticket.map(tic => {
-//             const temp = tic.tic_id;
-//             delete tic.tic_id;
-//             tic.id = temp
-//             rows.push(tic)
-//         })
-//     }
+    // for (let i = 0; i < tic.length; i++) {
+    //     tic[i].ticket.map(tic => {
+    //         const temp = tic.tic_id;
+    //         delete tic.tic_id;
+    //         tic.id = temp
+    //         rows.push(tic)
+    //     })
+    // }
 
-//     return (
-//         <div className='pt-28 flex justify-center'>
-//             {(userInfo?.usu_adm == 3) ?
-//                 <div className='bg-BC w-fit'>
-//                     <TabTicPet rows={rows} />
-//                 </div>
-//                 :
-//                 <NoPet />
-//             }
-//         </div>
-//     )
-// }
+    return (
+        <div className='pt-28 flex justify-center'>
+            {/* {(userInfo?.usu_adm == 3) ?
+                <div className='bg-BC w-fit'>
+                    <TabTicPet rows={rows} />
+                </div>
+                :
+                <NoPet />
+            } */}
+        </div>
+    )
+}
 
-// export default listaRepotes;
+export default listaRepotes;
